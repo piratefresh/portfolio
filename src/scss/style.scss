@@ -1,18 +1,34 @@
-// Google Fonts
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
 // Variables
 @import "./variables.scss";
-$open-sans: 'Open Sans', sans-serif;
+$open-sans: "Open Sans", sans-serif;
 // Styles
 @import "./header.scss";
 @import "./main.scss";
+@import "./moviedb.scss";
+@import "./filmit.scss";
+@import "./sailors.scss";
+@import "./templesmash.scss";
+@import "./simplehtmlcss.scss";
 
 body {
-    background: $purple;
-    color:$white;
-    font-family: $open-sans;
+  background: $purple;
+  color: $white;
+  font-family: $open-sans;
+  a {
+    color: $white;
+    text-decoration: none;
+  }
 }
-
-p{
-    color: $pink;
+p {
+  color: $pink;
+}
+h2 {
+  margin: 0;
+  padding: 0;
+}
+.mainButton {
+  margin-top: 2%;
+  background: $purple;
+  padding: 20px;
+  cursor: pointer;
 }

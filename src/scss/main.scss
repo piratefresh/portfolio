@@ -1,54 +1,82 @@
 @import "./variables.scss";
 
 .mainWrapper {
-    background: $pink;
-    height: 100%;
+  height: 100%;
 }
 .grid {
+  position: relative;
+  background: $pink;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+  .gridItem {
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    grid-auto-rows: minmax(120px, auto);
-    grid-auto-flow: dense;
-    .gridItem {
-        position: relative;
-        img {
-            position: relative;
-            max-width: 100%;
-            height: 100%;
-            object-fit: cover;
+    border-radius: 5%;
+    img {
+      position: relative;
+      width: 100%;
+      height: 700px;
+      object-fit: cover;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 0.5s ease;
+      background-color: rgba(51, 51, 51, 0.7);
+      .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h2 {
+          font-size: 2rem;
+          font-weight: 700;
+          text-transform: uppercase;
         }
-        .overlay {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            opacity: 0;
-            transition: .5s ease;
-            background-color: rgba(170, 37, 81, 0.9);
-            p {
-                color: $white;
-                z-index: 2;
-            }
+        .button {
+          margin-top: 2%;
+          background: $purple;
+          padding: 20px;
+          cursor: pointer;
         }
+        .tag-list {
+          display: flex;
+          .tag {
+            background: $pink;
+            padding: 20px;
+            margin-left: 4px;
+          }
+        }
+      }
+      p {
+        color: $white;
+        z-index: 2;
+      }
     }
-    .span-2 {
-        grid-column-end: span 2;
-        grid-row-end: span 2;
-    }
-    
-    .span-3 {
-        grid-column-end: span 4;
-        grid-row-end: span 4;
-    }
-    .span-4 {
-        grid-column-end: span 4;
-        grid-row-end: span 3;
-    }
+  }
 }
 .gridItem:hover .overlay {
-    opacity: 1;
-  }
+  opacity: 1;
+}
+/* 
+.project1 {
+  grid-area: project1;
+}
+.project2 {
+  grid-area: project2;
+}
+.project3 {
+  grid-area: project3;
+}
+.project4 {
+  grid-area: project4;
+}
+.project5 {
+  grid-area: project5;
+} */

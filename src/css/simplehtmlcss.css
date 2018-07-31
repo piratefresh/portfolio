@@ -1,0 +1,71 @@
+.pageWrapper {
+  height: 100%; }
+  .pageWrapper p {
+    color: #fff; }
+  .pageWrapper .gridPage {
+    display: grid;
+    grid-template-areas: "title title" "header header" "desc1 img1"; }
+    .pageWrapper .gridPage img {
+      max-width: 100%;
+      height: 100%;
+      -o-object-fit: contain;
+      object-fit: contain; }
+    .pageWrapper .gridPage .title {
+      grid-area: title;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .pageWrapper .gridPage .title h2 {
+        font-weight: 700;
+        font-size: 2rem; }
+      .pageWrapper .gridPage .title p {
+        width: 50vw; }
+    .pageWrapper .gridPage .header {
+      grid-area: header; }
+    .pageWrapper .gridPage .desc {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+      .pageWrapper .gridPage .desc h2 {
+        font-weight: 700;
+        font-size: 2rem; }
+      .pageWrapper .gridPage .desc p {
+        width: 50%; }
+      @media (max-width: 800px) {
+        .pageWrapper .gridPage .desc h2 {
+          font-size: 1rem; }
+        .pageWrapper .gridPage .desc p {
+          font-size: 0.8rem; } }
+      @media (max-width: 400px) {
+        .pageWrapper .gridPage .desc h2 {
+          font-size: 0.7rem; }
+        .pageWrapper .gridPage .desc p {
+          font-size: 0.6rem; } }
+    .pageWrapper .gridPage .desc1 {
+      grid-area: desc1; }
+    .pageWrapper .gridPage .imgPreview1 {
+      grid-area: img1; }
+    .pageWrapper .gridPage .imgPreview2 {
+      grid-area: img2; }
+    .pageWrapper .gridPage .desc2 {
+      grid-area: desc2; }
