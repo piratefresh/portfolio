@@ -25,6 +25,45 @@
   align-items: center; }
   .headerContent h1 {
     font-size: 6rem; }
+  .headerContent p {
+    color: #fff;
+    width: 50vw; }
   .headerContent a {
     text-decoration: none;
     color: #fff; }
+  .headerContent .emailHighlight {
+    color: #fff;
+    border-bottom: 2px dotted #fff; }
+
+nav {
+  padding: 5% 0;
+  width: 100%; }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0; }
+    nav ul li {
+      list-style: none; }
+    nav ul li:hover {
+      border-bottom: 3px #AA2551 solid; }
+    @media (max-width: 800px) {
+      nav ul {
+        font-size: 1rem; } }
+    @media (max-width: 550px) {
+      nav ul {
+        font-size: 0.7rem; } }
+    @media (max-width: 350px) {
+      nav ul {
+        font-size: 0.6rem; } }
+  @media (max-width: 550px) {
+    nav {
+      padding: 0; }
+      nav ul {
+        padding: 5% 0; } }

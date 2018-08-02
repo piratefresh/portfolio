@@ -22,8 +22,50 @@
   h1 {
     font-size: 6rem;
   }
+  p {
+    color: $white;
+    width: 50vw;
+  }
   a {
     text-decoration: none;
     color: $white;
+  }
+  .emailHighlight {
+    color: $white;
+    border-bottom: 2px dotted $white;
+  }
+}
+
+nav {
+  padding: 5% 0;
+  width: 100%;
+  ul {
+    display: flex;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+    }
+    li:hover {
+      border-bottom: 3px $pink solid;
+    }
+    @media (max-width: 800px) {
+      font-size: 1rem;
+    }
+    @media (max-width: 550px) {
+      font-size: 0.7rem;
+    }
+    @media (max-width: 350px) {
+      font-size: 0.6rem;
+    }
+  }
+  @media (max-width: 550px) {
+    padding: 0;
+    ul {
+      padding: 5% 0;
+    }
   }
 }

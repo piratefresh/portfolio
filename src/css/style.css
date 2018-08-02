@@ -25,9 +25,48 @@
   align-items: center; }
   .headerContent h1 {
     font-size: 6rem; }
+  .headerContent p {
+    color: #fff;
+    width: 50vw; }
   .headerContent a {
     text-decoration: none;
     color: #fff; }
+  .headerContent .emailHighlight {
+    color: #fff;
+    border-bottom: 2px dotted #fff; }
+
+nav {
+  padding: 5% 0;
+  width: 100%; }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0; }
+    nav ul li {
+      list-style: none; }
+    nav ul li:hover {
+      border-bottom: 3px #AA2551 solid; }
+    @media (max-width: 800px) {
+      nav ul {
+        font-size: 1rem; } }
+    @media (max-width: 550px) {
+      nav ul {
+        font-size: 0.7rem; } }
+    @media (max-width: 350px) {
+      nav ul {
+        font-size: 0.6rem; } }
+  @media (max-width: 550px) {
+    nav {
+      padding: 0; }
+      nav ul {
+        padding: 5% 0; } }
 
 .mainWrapper {
   height: 100%; }
@@ -38,15 +77,18 @@
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 20px; }
+  @media (max-width: 1000px) {
+    .grid {
+      grid-template-columns: 1fr; } }
   .grid .gridItem {
     position: relative;
     border-radius: 5%; }
     .grid .gridItem img {
       position: relative;
-      width: 100%;
-      height: 700px;
-      -o-object-fit: cover;
-      object-fit: cover; }
+      max-width: 100%;
+      height: 100%;
+      -o-object-fit: contain;
+      object-fit: contain; }
     .grid .gridItem .overlay {
       position: absolute;
       top: 0;
@@ -93,6 +135,11 @@
       .grid .gridItem .overlay p {
         color: #fff;
         z-index: 2; }
+    @media (max-width: 600px) {
+      .grid .gridItem img {
+        -o-object-fit: contain;
+        object-fit: contain;
+        max-width: 100%; } }
 
 .gridItem:hover .overlay {
   opacity: 1; }
@@ -506,6 +553,6 @@ h2 {
 
 .mainButton {
   margin-top: 2%;
-  background: #140467;
+  background: #AA2551;
   padding: 20px;
   cursor: pointer; }
